@@ -8,16 +8,16 @@ const ProductContainer = ({products, deleteProduct, addToCardProduct, editProduc
                 <div className="row">
                         {
                             products.map((product) => (
-                                <ProductCard
-                                    name={product.name}
-                                    thumbnail={product.thumbnail}
-                                    description={product.description}
-                                    price = {product.price}
-                                    stock= {product.stock}
-                                    deleteProduct={()=> deleteProduct(product.id)}
-                                    editProduct={()=> editProduct(product.id)}
-                                    addToCardProduct={()=> addToCardProduct(product.id)}
-                                    >
+                            <ProductCard
+                                name={product.name}
+                                thumbnail={product.thumbnail}
+                                description={product.description}
+                                price = {product.price}
+                                stock= {product.stock}
+                                deleteProduct={()=> deleteProduct(product.id)}
+                                addToCardProduct={()=> addToCardProduct(product.id)}
+                                idEdit={product.id}
+                            >
                             </ProductCard>
                             ))
                         }

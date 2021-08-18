@@ -1,7 +1,8 @@
 import React from 'react';
-import {AiOutlineDelete,AiOutlineEdit,AiOutlineShoppingCart} from 'react-icons/ai'
+import { AiOutlineDelete,AiOutlineEdit,AiOutlineShoppingCart } from 'react-icons/ai'
+import { NavLink } from 'react-router-dom';
 
-export default function Product ({ name, description, thumbnail , price, stock , id, deleteProduct, editProduct, addToCardProduct }) {
+export default function Product ({ name, description, thumbnail , price, stock , idEdit, id, deleteProduct, addToCardProduct }) {
   return (
     <div className="col-3">
       <div className="card m-2">
@@ -10,9 +11,9 @@ export default function Product ({ name, description, thumbnail , price, stock ,
               <div onClick={()=>deleteProduct(id)}>
                   <AiOutlineDelete/>
               </div>
-              <div onClick={()=>editProduct(id)}>
+              <NavLink style={{color:'gray'}} to={`edit-product/${idEdit}`}>
                   <AiOutlineEdit/>
-              </div>
+             </NavLink>
               <div onClick={()=>addToCardProduct(id)}>
                   <AiOutlineShoppingCart/>
               </div>
