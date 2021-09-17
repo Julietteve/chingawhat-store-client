@@ -21,6 +21,7 @@ export default function Product ({ name, description, thumbnail , price, stock ,
           </div>
         <img src={thumbnail} className="card-img-top product-thumbnail" alt={name}/>
           <div className="card-body">
+            <h6>{name}</h6>
             <h5 class="card-title">$ {price}</h5>
             <p className="card-text product-description">{description}</p>
           </div>

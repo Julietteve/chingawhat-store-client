@@ -15,7 +15,8 @@ const Cart = () => {
 
     const getProducts = async () => {
         const response = await genericFetch('GET', 'carrito')
-        setProducts(response[0].products)
+
+        setProducts(response)
     }
 
     const handleDeleteProduct = async () =>{

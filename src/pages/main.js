@@ -22,6 +22,7 @@ function Main() {
 
   const getProducts = async () => {
     const response = await genericFetch('GET', 'productos')
+    console.log(response)
     setProducts(response)
   }
 

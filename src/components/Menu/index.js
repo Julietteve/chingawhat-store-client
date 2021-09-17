@@ -9,17 +9,18 @@ const Menu = () => {
 
     const getProducts = async () => {
         const response = await genericFetch('GET', 'carrito')
-        setProductsLen(response[0].products.length)
+        console.log(response)
+        setProductsLen(response.length)
     }
 
     useEffect(()=>{
         getProducts()
-    })
+    },[])
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-                    <NavLink className="navbar-brand" to='/'>ChingaWhat!</NavLink>
+                    <NavLink className="navbar-brand" to='/'>Lágrimas del Sol</NavLink>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
